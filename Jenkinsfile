@@ -29,13 +29,13 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // 存储生成的报告文件
-            archiveArtifacts artifacts: '**/target/*.html', allowEmptyArchive: true
-            // 收集测试结果报告
-            junit 'target/surefire-reports/*.xml'
-        }
-    }
+//
+//     post {
+//         always {
+//             // 存储生成的报告文件
+//             archiveArtifacts artifacts: '**/target/*.html', allowEmptyArchive: true
+//             // 收集测试结果报告
+//             junit 'target/surefire-reports/*.xml'
+//         }
+//     }
 }
