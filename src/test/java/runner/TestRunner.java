@@ -11,6 +11,6 @@ import org.testng.annotations.Test;
   plugin = {"pretty", "html:target/cucumer-html-report", "json:cucumber.json"}
 )
 
-@Test
+
 public class TestRunner extends AbstractTestNGCucumberTests{
 }
