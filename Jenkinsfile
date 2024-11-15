@@ -2,7 +2,7 @@ pipeline {
     agent any  // 指定在任何可用的 Jenkins 节点上运行
 
     tools {
-        maven 'Maven'  // Jenkins 中配置的 Maven 版本
+        maven 'maven'  // Jenkins 中配置的 Maven 版本
     }
 
     stages {
