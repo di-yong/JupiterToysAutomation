@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // 使用 Maven 安装项目依赖并编译项目
                 echo 'Installing dependencies...'
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 // 使用 Maven 运行 Selenium 测试
                 echo 'Running tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
