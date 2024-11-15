@@ -9,13 +9,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // 从 GitHub 拉取代码
-                git branch: 'main', url: 'https://github.com/di-yong/JupiterToysAutomation.git'
+                git branch: 'master', url: 'https://github.com/di-yong/JupiterToysAutomation.git'
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 // 使用 Maven 安装项目依赖并编译项目
+                echo 'Installing dependencies...'
                 sh 'mvn clean install'
             }
         }
@@ -23,6 +24,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // 使用 Maven 运行 Selenium 测试
+                echo 'Running tests...'
                 sh 'mvn test'
             }
         }
